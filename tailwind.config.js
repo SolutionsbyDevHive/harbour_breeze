@@ -10,6 +10,8 @@ export default {
           "linear-gradient(118deg, #E7278A 0%, rgba(231, 39, 138, 0.00) 100%)",
         "pink-gradient2":
           "linear-gradient(118deg, rgba(231, 39, 138, 0.00) 0%, #E7278A 100%)",
+        "custom-blue-gradient":
+          "linear-gradient(to bottom right, #18344d, #27587d)",
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],

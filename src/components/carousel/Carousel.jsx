@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
-import OwlCarousel from 'react-owl-carousel';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
-import './Carousel.css';
+import React, { useEffect } from "react";
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
+import "./Carousel.css";
 
 const options = {
   loop: true,
@@ -15,25 +15,25 @@ const options = {
 const ParallaxOwlCarousel = () => {
   useEffect(() => {
     const handleScroll = () => {
-      const items = document.querySelectorAll('.parallax-bg');
+      const items = document.querySelectorAll(".parallax-bg");
       items.forEach((item) => {
         const scrollPosition = window.pageYOffset;
         // Increase multiplier to make the parallax more noticeable
-        item.style.transform = `translateY(${scrollPosition * 0.8}px)`; // Stronger parallax effect
+        item.style.transform = `translateY(${scrollPosition * 0.2}px)`; // Stronger parallax effect
       });
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const images = [
-    '/assets/Gym.webp',
-    '/assets/yoga.webp',
-    '/assets/mazgaon.webp',
+    "/assets/Gym.webp",
+    "/assets/yoga.webp",
+    "/assets/mazgaon.webp",
   ];
 
   return (
