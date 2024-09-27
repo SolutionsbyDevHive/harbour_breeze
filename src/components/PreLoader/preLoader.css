@@ -1,0 +1,54 @@
+/* Preloader.css */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1A3E5C; /* Dark blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+  
+  .preloader.slide-up-in {
+    transform: translateY(0); /* Preloader is in view */
+    opacity: 1;
+  }
+  
+  .preloader.slide-up-out {
+    transform: translateY(-100%); /* Slide up and hide */
+    opacity: 0;
+  }
+  
+  .preloader-content {
+    text-align: center;
+    color: #D6B575;
+  }
+  
+  .preloader-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .progress-bar {
+    width: 300px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.2); /* Light background for progress bar */
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  
+  .progress {
+    height: 100%;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .progress-text {
+    font-size: 1rem;
+    color: #D6B575;
+  }
+  

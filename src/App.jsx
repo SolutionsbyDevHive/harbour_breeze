@@ -6,7 +6,7 @@ import Contact from "./pages/contact/Contact";
 import NotFound from "./pages/NotFound/NotFound";
 function App() {
   return (
-    <div>
+    <>
     <Router>
     <Routes>
       <Route path="/" element={<Home />} />
@@ -16,7 +16,7 @@ function App() {
       <Route path="*" element={<NotFound />} />
     </Routes>
   </Router>
-    </div>
+    </>
   );
 }
 
