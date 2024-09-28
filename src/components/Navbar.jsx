@@ -15,8 +15,9 @@ const Navbar = () => {
   // Array containing navigation items
   const navItems = [
     { id: 1, text: "Home", path: "/" },
-    { id: 2, text: "About", path: "/about" },
+    { id: 2, text: "About", path: "#about" },
     { id: 3, text: "Contact", path: "/contact" },
+    { id: 4, text: "Floor Plan", path: "#floorplan" },
   ];
 
   // Effect to handle scroll detection

@@ -21,21 +21,21 @@ export const Features = () => {
         <span className=" text-3xl text-[#d5b36b]  border-b-[1px] border-[#d5b36b] font-trajan">
           Features of{" "}
         </span>{" "}
-        <span className=" text-3xl ml-1  font-trajan">Pavillion</span>
+        <span className=" text-3xl ml-1  font-trajan">Harbour Breeze</span>
       </div>{" "}
       <section className=" py-6 flex flex-col gap-y-6  px-[1rem] md:px-[0rem]">
         <div className=" flex w-full flex-col md:flex-row justify-center gap-y-1 gap-x-[5rem] items-center md:items-start ">
           <img data-aos="fade-right" className=" w-[60%] md:w-[30%]" src={Photo1} alt="photo1" />
-          <div data-aos="fade-left" className="bg-[#222222] rounded-2xl w-[80%] md:w-[50%] h-fit pb-0 md:pb-[10rem] p-4 text-white">
+          <div data-aos="fade-left" className="bg-[#1A3E5C] text-[#d2ac62] flex items-center justify-center mt-24 rounded-2xl w-[80%] md:w-[50%] h-fit text-xl pb-0 md:pb-[10rem] p-4 ">
             <div data-aos="fade-up">
 
-            <h2 className="text-lg font-semibold mt-4">
+            <h2 className="text-xl font-semibold mt-4">
               6 Ft. By 32 Ft. Sundeck to take in the Sea and Sunshine.
             </h2>
             <p className="mt-8">
-              Throw your gaze from the sundeck at ‘The Pavilion’ and you’ll have
+              Throw your gaze from the sundeck at 'Harbour Breeze' and you’ll have
               the Arabian Sea and the Shivaji Park for company over a cocktail.
-              Yes, the sea is a close neighbour for residents of ‘The Pavilion’
+              Yes, the sea is a close neighbour for residents of ‘Harbour Breeze’
               – in fact it’s just about 350 meters away.
             </p>
             <p className="mt-8">
@@ -47,18 +47,18 @@ export const Features = () => {
         </div>
 
         <div className="relative flex w-full justify-center px-2 py-1 border-t-4 border-b-4 border-[#d5b36b] bg-custom-blue-gradient flex-col md:flex-row gap-y-1 gap-x-[5rem] items-center md:items-start">
-          <div className="  mt-4 text-right hidden md:block w-[70%] md:w-[50%] h-[20rem] text-white">
+          <div className="  mt-4 text-right hidden md:block w-[70%] md:w-[50%] h-[20rem] text-[#d2ac62] items-center justify-center">
           <img data-aos="fade-left" src={light_leaf} className=" absolute w-[15rem] bottom-0 left-0 scale-x-[-1] z-10 opacity-60 -mb-[3rem]" alt="leaf"/>
 <div data-aos="fade-up">
 
-            <h2 className=" font-montserrat text-lg ">Architect Speak</h2>
-            <p className="mt-8">
+            <h2 className=" font-montserrat text-lg mt-10 ">Architect Speak</h2>
+            <p className="mt-2">
               The landmark location makes ‘The Pavilion’ a marquee project. Our
               core planning principle was to create a luxurious layout which
               optimized the views of the park on the north and the ocean to the
               west.
             </p>
-            <p className="mt-8">
+            <p className="mt-4">
               The experience begins with a grand covered porch for vehicle drop
               off/pick up leading to a double-height lobby overlooking the park.
               Each apartment has been designed as a seamless column-free space
@@ -67,7 +67,7 @@ export const Features = () => {
               the owners. Full-height windows maximize the natural light and
               ventilation for the apartment.
             </p>
-            <p className="mt-8">
+            <p className="mt-4">
               The facade has been designed with classical architectural elements
               to give a timeless and elegant character to the structure.
             </p>
@@ -102,7 +102,7 @@ export const Features = () => {
           </div>{" "}
         </div>
 
-        <div className=" flex w-full justify-center flex-col md:flex-row gap-y-1 gap-x-[5rem] items-center md:items-start">
+        {/* <div className=" flex w-full justify-center flex-col md:flex-row gap-y-1 gap-x-[5rem] items-center md:items-start">
           <img data-aos="fade-right" className=" w-[60%] md:w-[30%]" src={Photo3} alt="photo3" />
           <div data-aos="fade-left" className="bg-[#222222] rounded-2xl w-[80%] md:w-[50%] h-fit pb-0 md:pb-[10rem] p-4 text-white">
             <div data-aos="fade-up">
@@ -123,21 +123,21 @@ export const Features = () => {
             </p>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className="relative flex w-full justify-center border-t-4 border-b-4 border-[#d5b36b] bg-custom-blue-gradient flex-col md:flex-row gap-y-1 gap-x-[5rem] items-center md:items-start">
+        <div className="relative flex w-full justify-center border-t-4 border-b-4 border-[#d5b36b] bg-custom-blue-gradient flex-col md:flex-row-reverse gap-y-1 gap-x-[5rem] items-center md:items-start">
           <img data-aos="fade-right" src={light_leaf} className=" absolute w-[15rem] bottom-0 left-0 scale-x-[-1] z-10 opacity-60 -mb-[3rem]" alt="leaf"/>
-          <div className="  mt-4 text-right hidden md:block w-[70%] md:w-[50%] h-[20rem] text-white">
+          <div className="  mt-4 text-left  hidden md:block w-[70%] md:w-[50%] h-[20rem] text-white">
             <div data-aos="fade-up">
 
-            <h2 className=" font-montserrat text-lg ">Architect Speak</h2>
-            <p className="mt-4">
+            <h2 className=" font-montserrat text-lg mt-10 text-[#d2ac62] ">Architect Speak</h2>
+            <p className="mt-4 text-[#d2ac62]">
               The landmark location makes ‘The Pavilion’ a marquee project. Our
               core planning principle was to create a luxurious layout which
               optimized the views of the park on the north and the ocean to the
               west.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-[#d2ac62]">
               The experience begins with a grand covered porch for vehicle drop
               off/pick up leading to a double-height lobby overlooking the park.
               Each apartment has been designed as a seamless column-free space
@@ -146,7 +146,7 @@ export const Features = () => {
               the owners. Full-height windows maximize the natural light and
               ventilation for the apartment.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-[#d2ac62]">
               The facade has been designed with classical architectural elements
               to give a timeless and elegant character to the structure.
             </p>

@@ -101,7 +101,7 @@ function Contact() {
                 <FaPhoneAlt className="text-yellow-600 text-xl" />
                 <div>
                   <span className="block text-base">Phone</span>
-                  <span className="text-sm text-gray-400">+91-8851893233</span>
+                  <span className="text-lg text-gray-400">+91-8851893233</span>
                 </div>
               </div>
 
@@ -110,7 +110,7 @@ function Contact() {
                 <FaEnvelope className="text-yellow-600 text-xl" />
                 <div>
                   <span className="block text-base">Email</span>
-                  <span className="text-sm text-gray-400">
+                  <span className="text-lg text-gray-400">
                     thepavilion@chhedagroup.co.in
                   </span>
                 </div>
@@ -121,7 +121,7 @@ function Contact() {
                 <FaMapMarkerAlt className="text-yellow-600 text-xl" />
                 <div>
                   <span className="block text-base">Location</span>
-                  <span className="text-sm text-gray-400">
+                  <span className="text-lg text-gray-400">
                     7B, Dr. Madhukar B Raut Marg, <br />
                     Dadar West, Shivaji Park, <br />
                     Mumbai, Maharashtra 400028

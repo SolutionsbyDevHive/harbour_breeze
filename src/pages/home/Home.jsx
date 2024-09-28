@@ -22,7 +22,7 @@ function Home() {
         <Preloader />
       ) : (
         <div>
-          <Navbar />
+          <Navbar />  
           <div className="pt-24">
             <Section1 />
               <FloorPlan />
