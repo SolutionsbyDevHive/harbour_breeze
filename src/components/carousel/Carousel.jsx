@@ -19,11 +19,7 @@ const ParallaxOwlCarousel = () => {
       items.forEach((item) => {
         const scrollPosition = window.pageYOffset;
         // Increase multiplier to make the parallax more noticeable
-<<<<<<< Updated upstream
-        item.style.transform = `translateY(${scrollPosition * 0.2}px)`; // Stronger parallax effect
-=======
         item.style.transform = `translateY(${scrollPosition * 0.15  }px)`; // Stronger parallax effect
->>>>>>> Stashed changes
       });
     };
 
