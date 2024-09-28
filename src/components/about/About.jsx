@@ -11,7 +11,7 @@ function About() {
     AOS.init({ duration: 1000 }); // Initialize AOS with options
   }, []);
   return (
-    <div className=' w-[100%] flex  md:flex-row my-[1rem] bg-[#1A3E5C] md:py-[50px] py-[30px] px-[15px]  flex-col items-center justify-around '>
+    <div id="about" className=' w-[100%] flex  md:flex-row  bg-[#1A3E5C] md:py-[50px] py-[30px] px-[15px]  flex-col items-center justify-around '>
       <img data-aos="fade-down" src={building} className='h-[100%] md:w-[38%] '></img>
       <div className='flex flex-col gap-[12px] md:w-[42rem]   md:p-[3rem] p-[1rem] justify-between rounded-2xl'>
         <img data-aos="fade-down" src={logo} className="w-[380px] self-center"></img>

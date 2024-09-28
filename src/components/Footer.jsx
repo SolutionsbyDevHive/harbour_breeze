@@ -68,7 +68,7 @@ function Footer() {
 
               {/* Link to About Us */}
               <a
-                href="/about"
+                href="#about"
                 className="text-[16px] hover:text-[#d5b36b] cursor-pointer text-[#646464] font-medium hover:font-bold"
               >
                 About Us

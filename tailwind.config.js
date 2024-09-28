@@ -15,6 +15,7 @@ export default {
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
+        trajan: ['TrajanPro', 'serif'],
       },
     },
   },

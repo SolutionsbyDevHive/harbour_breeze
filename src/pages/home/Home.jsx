@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Preloader from "../../components/PreLoader/PreLoader";
-import About from "../about/About";
+import About from "../../components/about/About";
 import Section1 from "../../components/section1/section1";
 import FloorPlan from "../../components/flootPlan/FloorPlan";
 import { Features } from "../../components/Home/Features";
@@ -26,8 +26,8 @@ function Home() {
           {/* Padding to prevent content overlap with the sticky navbar */}
           <div className="pt-24">
             <Section1 />
+              <FloorPlan />
             <About />
-            <FloorPlan />
             <Features />
             <Footer />
           </div>
