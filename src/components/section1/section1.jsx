@@ -1,7 +1,7 @@
 import React from "react";
 import ParallaxOwlCarousel from "../carousel/Carousel";
-import img from "/assets/images.webp";
-import design from "/assets/design.png";
+import amenities from "/assets/download.png";
+import generated from "/assets/generated.jpeg";
 
 function Section1() {
   return (
@@ -10,14 +10,14 @@ function Section1() {
       <section id="section2">
         <div className="section2-main justify-evenly flex sm:flex-col lg:flex-row items-center w-full mt-10">
           <img
-            className="qoute sm-mt-2 lg:ml-4  w-[25%]"
-            src={img}
+            className="qoute sm-mt-2 lg:ml-4 rounded-2xl shadow-2xl w-[25%]"
+            src={generated}
             alt="quote"
             data-aos="fade-down"
           />
           <img
-            className="qoute sm-mt-2 lg:ml-4  w-[25%] "
-            src={img}
+            className="qoute sm-mt-2 lg:ml-4 rounded-2xl w-[25%] "
+            src={amenities}
             data-aos="fade-down"
             alt="quote"
           />

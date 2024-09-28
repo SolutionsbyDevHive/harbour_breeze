@@ -23,7 +23,6 @@ function Home() {
       ) : (
         <div>
           <Navbar />
-          {/* Padding to prevent content overlap with the sticky navbar */}
           <div className="pt-24">
             <Section1 />
               <FloorPlan />
