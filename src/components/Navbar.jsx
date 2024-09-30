@@ -7,12 +7,13 @@ const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
-  // Toggle function to handle the navbar's display
+
+  // Toggle mobile nav
   const handleNav = () => {
     setNav(!nav);
   };
 
-  // Array containing navigation items
+  // Navigation Items
   const navItems = [
     { id: 1, text: "Home", path: "/" },
     { id: 2, text: "About", path: "#about" },
@@ -20,92 +21,80 @@ const Navbar = () => {
     { id: 4, text: "Floor Plan", path: "#floorplan" },
   ];
 
-  // Effect to handle scroll detection
+  // Effect for sticky navbar on scroll
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Handle smooth scrolling for internal links
   const handleNavigation = (path) => {
-    if (path == "/") {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth' // This enables a smooth scrolling effect
-      });
-      setNav(false); // Close mobile navigation after click
-
+    if (path.startsWith("#")) {
+      const element = document.querySelector(path);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     } else {
-    
-      // navigate(path); // Navigate to the specified path
-      setNav(false); // Close mobile navigation after click
-
+      navigate(path);
     }
+    setNav(false); // Close mobile nav after selection
   };
+
   return (
-    <div
-  className={`fixed top-0 left-0 w-full z-50 flex justify-between items-center h-[100px] text-[#d2ac62] font-bold transition-all duration-300 overflow-hidden ${
-    isScrolled
-      ? "bg-[#1A3E5C]/90 backdrop-blur-lg shadow-lg"
-      : "bg-[#1A3E5C]/90 backdrop-blur-lg shadow-lg"
-  }`}
->
-  {/* Logo */}
-  <img src={logo} className="h-auto w-[120px] md:w-[145px]" />
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 flex justify-between items-center h-[80px] px-6 text-[#d2ac62] font-bold transition-all duration-300 ${
+        isScrolled ? "bg-[#173A55]/90 shadow-lg" : "bg-[#173A55]/90"
+      }`}
+    >
+      {/* Logo */}
+      <img
+        src={logo}
+        alt="Logo"
+        className="h-auto w-[100px] md:w-[110px]" // Adjusted logo size
+      />
 
-  {/* Desktop Navigation */}
-  <ul className="hidden md:flex mr-6 font-montserrat font-semibold text-lg">
-    {navItems.map((item) => (
-      <li
-        key={item.id}
-        className="p-2 px-4 hover:border-b-[1px] hover:cursor-pointer font-trajan border-[#d5b36b] "
-        onClick={() => handleNavigation(item.path)}
+      {/* Desktop Navigation */}
+      <ul className="hidden md:flex space-x-8 font-trajan font-semibold text-lg">
+        {navItems.map((item) => (
+          <li
+            key={item.id}
+            className="cursor-pointer hover:text-[#f4d09a] transition-all"
+            onClick={() => handleNavigation(item.path)}
+          >
+            {item.text}
+          </li>
+        ))}
+      </ul>
+
+      {/* Mobile Navigation Toggle */}
+      <div
+        onClick={handleNav}
+        className="md:hidden z-50 cursor-pointer text-[#f4d09a]" // Changed hamburger menu color
       >
-        {item.text}
-      </li>
-    ))}
-  </ul>
+        {nav ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
+      </div>
 
-  {/* Mobile Navigation Icon */}
-  <div
-    onClick={handleNav}
-    className="block md:hidden cursor-pointer font-trajan z-50"
-  >
-    {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
-  </div>
-
-  {/* Mobile Navigation Menu */}
-  <ul
-    className={`${
-      nav
-        ? "fixed md:hidden left-0 top-0 w-[60vw] h-full border-r border-r-gray-900 bg-[#1A3E5C] ease-in-out duration-500 z-40"
-        : "ease-in-out w-[60vw] duration-500 fixed top-0 bottom-0 left-[-100%]"
-    }`}
-  >
-    {/* Mobile Logo */}
-    <img src={logo} className="w-[60%] mb-12 ml-4" />
-
-    {/* Mobile Navigation Items */}
-    {navItems.map((item) => (
-      <li
-        key={item.id}
-        className="p-2 py-4 border-b rounded-xl duration-300 hover:text-blue-950 cursor-pointer font-trajan border-[#d5b36b]"
-        onClick={() => handleNavigation(item.path)}
+      {/* Mobile Navigation Menu */}
+      <ul
+        className={`fixed top-0 left-0 w-[60vw] h-full bg-[#1A3E5C] border-r border-[#d5b36b] transform ${
+          nav ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-500 md:hidden z-40`}
       >
-        <span className="ml-3">{item.text}</span>
-      </li>
-    ))}
-  </ul>
-</div>
-
+        <img src={logo} alt="Logo" className="w-[60%] mx-auto mt-6 mb-12" />
+        {navItems.map((item) => (
+          <li
+            key={item.id}
+            className="p-4 text-[#d2ac62] text-lg font-trajan border-b border-[#d5b36b] hover:text-[#f4d09a] transition-all cursor-pointer"
+            onClick={() => handleNavigation(item.path)}
+          >
+            {item.text}
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 };
 
