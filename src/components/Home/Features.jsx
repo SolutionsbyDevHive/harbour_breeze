@@ -181,6 +181,8 @@
 //     </section>
 //   );
 // };
+
+
 import React, { useEffect } from "react";
 import Photo1 from "/Features/1.webp";
 import Photo2 from "/Features/2.webp";
@@ -188,6 +190,7 @@ import Photo3 from "/Features/3.webp";
 import Photo4 from "/Features/4.webp";
 import leaf from "/Features/leaf.png";
 import light_leaf from "/Features/Light_leaf.png";
+import animation from "/Features/animation.webm";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -197,110 +200,81 @@ export const Features = () => {
   }, []);
 
   return (
-    <section className="w-full px-4 md:px-0 flex flex-col justify-start items-center text-[#112D4E]"> {/* Changed to dark blue */}
-      <div data-aos="fade-right" className="w-full text-center md:text-left pl-0 md:pl-24 mt-8">
-        <span className="text-2xl md:text-3xl text-[#FFC857] border-b-[1px] border-[#FFC857] font-trajan">
+    <section className="w-full px-4 md:px-0 flex justify-start flex-col items-center text-blue-950">
+      {/* Heading */}
+      <div data-aos="fade-right" className="w-full text-center md:text-left pl-0 md:pl-24 mt-12">
+        <span className="text-2xl md:text-3xl text-[#d5b36b] border-b-[1px] border-[#d5b36b] font-trajan">
           Features of{" "}
-        </span>{" "}
-        <span className="text-2xl md:text-3xl ml-1 font-trajan text-[#F4A261]">Harbour Breeze</span> {/* Changed to a more vibrant gold */}
+        </span>
+        <span className="text-2xl md:text-3xl ml-1 font-trajan">Harbour Breeze</span>
       </div>
 
+      {/* Features Section */}
       <section className="py-6 flex flex-col gap-y-6 px-4 md:px-0">
         {/* Feature 1 */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-y-6 md:gap-x-16">
-          <img data-aos="fade-right" className="w-[80%] md:w-[40%]" src={Photo1} alt="photo1" />
-          <div
-            data-aos="fade-left"
-            className="bg-[#1A3E5C] text-[#FFC857] mt-4 md:mt-24 p-4 rounded-xl w-full md:w-[50%] text-center md:text-left"
-          >
-            <h2 className="text-xl font-semibold">6 Ft. By 32 Ft. Sundeck to take in the Sea and Sunshine.</h2>
-            <p className="mt-4 text-[#FFEE93]"> {/* Changed to a lighter shade for readability */}
-              Throw your gaze from the sundeck at 'Harbour Breeze' and you’ll have the Arabian Sea and the Shivaji Park
-              for company over a cocktail. The sea is just about 350 meters away.
-            </p>
-            <p className="mt-4 text-[#FFEE93]">
-              So, you can either choose to just gaze or walk up to the shore to feel the breeze.
-            </p>
-          </div>
-        </div>
-
-        {/* Feature 2 */}
-        <div className="relative flex flex-col md:flex-row justify-center items-center gap-y-6 md:gap-x-16 border-t-4 border-b-4 border-[#FFC857] bg-custom-blue-gradient py-6"> {/* Color adjusted */}
-          <div className="relative w-full md:w-[50%] text-right hidden md:block px-6">
-            <img
-              data-aos="fade-left"
-              src={light_leaf}
-              className="absolute w-[10rem] bottom-0 left-0 scale-x-[-1] z-10 opacity-60 -mb-8"
-              alt="leaf"
-            />
+        <div className="flex w-full flex-col md:flex-row justify-center gap-y-4 gap-x-12 items-center">
+          <img data-aos="fade-right" className="w-[80%] md:w-[30%]" src={Photo1} alt="photo1" />
+          <div data-aos="fade-left" className="bg-[#1A3E5C] text-[#d2ac62] flex items-center justify-center mt-12 md:mt-24 rounded-2xl w-full md:w-[50%] text-base md:text-xl p-4">
             <div data-aos="fade-up">
-              <h2 className="font-montserrat text-lg mt-10 text-[#FFC857]">Architect Speak</h2>
-              <p className="mt-4 text-[#FFEE93]"> {/* Lighter font color for better contrast */}
-                The landmark location makes ‘The Pavilion’ a marquee project.
+              <h2 className="text-lg md:text-xl font-semibold mt-4">
+                A Jewel in the Heart of Mazgaon
+              </h2>
+              <p className="mt-6 md:mt-8">
+                Harbour Breeze offers you a luxurious lifestyle in the heart of Mazgaon, a location already renowned for its historical significance and modern connectivity. The 20-storeyed building stands as a beacon of architectural brilliance, offering exclusive 1 & 2 BHK flats with 3 BHK Jodi flats available for those who desire extra space.
               </p>
-              <p className="mt-4 text-[#FFEE93]">
-                Each apartment is designed to optimize park and sea views with opulent ceilings.
-              </p>
-              <p className="mt-4 text-[#FFEE93]">
-                The facade has classical architectural elements for a timeless structure.
-              </p>
-            </div>
-          </div>
-
-          <img data-aos="fade-left" className="w-[80%] md:w-[40%]" src={Photo2} alt="photo2" />
-
-          <div className="text-left md:text-right block md:hidden w-full px-6">
-            <img
-              data-aos="fade-right"
-              src={light_leaf}
-              className="absolute w-[10rem] bottom-0 left-0 scale-x-[-1] z-10 opacity-60 -mb-8"
-              alt="leaf"
-            />
-            <div data-aos="fade-up">
-              <h2 className="font-montserrat text-lg text-[#FFC857]">Architect Speak</h2>
-              <p className="mt-4 text-[#FFEE93]">
-                The landmark location makes ‘The Pavilion’ a marquee project.
-              </p>
-              <p className="mt-4 text-[#FFEE93]">
-                Each apartment is designed to optimize park and sea views with opulent ceilings.
-              </p>
-              <p className="mt-4 text-[#FFEE93]">
-                The facade has classical architectural elements for a timeless structure.
+              <p className="mt-6 md:mt-8">
+                With an array of premium features like fully mechanized parking, a rooftop with state-of-the-art amenities, and retail spaces for convenience, Harbour Breeze provides the ultimate blend of luxury and functionality.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Feature 3 */}
-        <div className="relative flex flex-col md:flex-row-reverse justify-center items-center gap-y-6 md:gap-x-16 border-t-4 border-b-4 border-[#FFC857] bg-custom-blue-gradient py-6">
-          <img
-            data-aos="fade-right"
-            src={light_leaf}
-            className="absolute w-[10rem] bottom-0 left-0 scale-x-[-1] z-10 opacity-60 -mb-8"
-            alt="leaf"
-          />
-          <div className="w-full md:w-[50%] text-left hidden md:block px-6">
+        {/* Architect Speak Section */}
+        <div className="relative flex w-full justify-center px-2 py-4 border-t-4 border-b-4 border-[#d5b36b] bg-custom-blue-gradient flex-col md:flex-row gap-y-4 gap-x-12 items-center">
+          <div className="mt-4 text-right hidden md:block w-[70%] md:w-[50%] text-[#d2ac62]">
+            <img data-aos="fade-left" src={light_leaf} className="absolute w-[15rem] bottom-0 left-0 scale-x-[-1] z-10 opacity-60 -mb-[3rem]" alt="leaf" />
             <div data-aos="fade-up">
-              <h2 className="font-montserrat text-lg text-[#FFC857]">Architect Speak</h2>
-              <p className="mt-4 text-[#FFEE93]">
-                The landmark location makes ‘The Pavilion’ a marquee project. Our core principle is luxurious planning
-                with high ceilings and natural light.
+              <h2 className="font-montserrat text-lg mt-10">Timeless Design Meets Modern Comfort</h2>
+              <p className="mt-2">
+                The architecture of Harbour Breeze has been meticulously planned to optimize views of the serene Arabian Sea and the lush greenery of Shivaji Park. Every detail has been designed to exude luxury—from the grand entrance porch that leads to a double-height lobby to the seamless column-free apartments that maximize both space and natural light.
               </p>
-              <p className="mt-4 text-[#FFEE93]">
-                Full-height windows ensure maximum ventilation. The facade has been designed with classical elements to
-                add elegance to the structure.
+              <p className="mt-4">
+                The facade is a perfect fusion of classical elements and contemporary design, creating a timeless aesthetic that will remain elegant for years to come.
+              </p>
+            </div>
+          </div>
+          <img data-aos="fade-left" className="w-[80%] md:w-[30%]" src={Photo2} alt="photo2" />
+          <div className="text-left md:text-right block md:hidden w-full md:w-[50%] p-4">
+            <div data-aos="fade-up">
+              <h2 className="font-montserrat text-lg">Timeless Design Meets Modern Comfort</h2>
+              <p className="mt-4">
+                The architecture of Harbour Breeze has been meticulously planned to optimize views of the serene Arabian Sea and the lush greenery of Shivaji Park.
+              </p>
+              <p className="mt-4">
+                Every detail has been designed to exude luxury—from the grand entrance porch to the seamless column-free apartments that maximize both space and natural light.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Third Section */}
+        <div className="relative flex w-full justify-center border-t-4 border-b-4 border-[#d5b36b] bg-custom-blue-gradient flex-col md:flex-row-reverse gap-y-4 gap-x-12 items-center">
+          <div className="mt-4 text-left hidden md:block w-[70%] md:w-[50%] text-white">
+            <div data-aos="fade-up">
+              <h2 className="font-montserrat text-lg mt-10 text-[#d2ac62]">A Life of Wellness and Leisure</h2>
+              <p className="mt-4 text-[#d2ac62]">
+                At Harbour Breeze, residents are treated to a wellness-focused lifestyle that encompasses a fully equipped gymnasium, a yoga and meditation deck, and a rooftop filled with amenities designed to provide both relaxation and entertainment.
+              </p>
+              <p className="mt-4 text-[#d2ac62]">
+                From the senior citizen’s corner to the barbeque deck and party lawn, Harbour Breeze creates a sense of community while ensuring the utmost in comfort and luxury.
               </p>
             </div>
           </div>
           <img data-aos="fade-left" className="w-[80%] md:w-[40%]" src={Photo4} alt="photo4" />
-          <div className="text-left md:text-right block md:hidden w-full px-6">
-            <h2 className="font-montserrat text-lg text-[#FFC857]">Architect Speak</h2>
-            <p className="mt-4 text-[#FFEE93]">
-              The landmark location makes ‘The Pavilion’ a marquee project. Our core principle is luxurious planning
-              with high ceilings and natural light.
-            </p>
-            <p className="mt-4 text-[#FFEE93]">
-              Full-height windows ensure maximum ventilation. The facade has classical elements for elegance.
+          <div className="text-left md:text-right block md:hidden w-full md:w-[50%] p-4 text-white">
+            <h2 className="font-montserrat text-lg">A Life of Wellness and Leisure</h2>
+            <p className="mt-4">
+              At Harbour Breeze, residents are treated to a wellness-focused lifestyle that encompasses a fully equipped gymnasium, a yoga and meditation deck, and a rooftop filled with amenities designed for relaxation and entertainment.
             </p>
           </div>
         </div>
