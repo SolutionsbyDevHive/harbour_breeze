@@ -201,7 +201,6 @@ export const Features = () => {
 
   return (
     <section className="w-full px-4 md:px-0 flex justify-start flex-col items-center text-blue-950">
-      {/* Heading */}
       <div data-aos="fade-right" className="w-full text-center md:text-left pl-0 md:pl-24 mt-12">
         <span className="text-2xl md:text-3xl text-[#d5b36b] border-b-[1px] border-[#d5b36b] font-trajan">
           Features of{" "}
