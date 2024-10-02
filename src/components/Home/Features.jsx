@@ -302,6 +302,12 @@ export const Features = () => {
 
         {/* Third Section */}
         <div className="relative flex w-full justify-center border-t-4 border-b-4 border-[#d5b36b] bg-custom-blue-gradient flex-col md:flex-row-reverse gap-y-4 gap-x-12 items-center">
+          <img
+            data-aos="fade-left"
+            src={light_leaf}
+            className="absolute w-[15rem] bottom-0 right-0 scale-x-[-1] z-10 opacity-60 -mb-[3rem]"
+            alt="leaf"
+          />
           <div className="mt-4 text-left hidden md:block w-[70%] md:w-[50%] ">
             <div data-aos="fade-up">
               <h2 className="font-montserrat text-lg mt-10 text-[#d2ac62]">
