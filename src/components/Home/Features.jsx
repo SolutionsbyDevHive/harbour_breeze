@@ -9,10 +9,9 @@
 // import AOS from 'aos';
 // import 'aos/dist/aos.css';
 
-
 // export const Features = () => {
 //   useEffect(() => {
-//     AOS.init({ duration: 1000 }); 
+//     AOS.init({ duration: 1000 });
 //   }, []);
 //   return (
 //     <section className=" w-full px-[1rem] md:px-[0rem] flex justify-start flex-col items-center text-blue-950">
@@ -182,7 +181,6 @@
 //   );
 // };
 
-
 import React, { useEffect } from "react";
 import Photo1 from "/Features/1.webp";
 import Photo2 from "/Features/2.webp";
@@ -191,8 +189,8 @@ import Photo4 from "/Features/4.webp";
 import leaf from "/Features/leaf.png";
 import light_leaf from "/Features/Light_leaf.png";
 import animation from "/Features/animation.webm";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const Features = () => {
   useEffect(() => {
@@ -201,56 +199,102 @@ export const Features = () => {
 
   return (
     <section className="w-full px-4 md:px-0 flex justify-start flex-col items-center text-blue-950">
-      <div data-aos="fade-right" className="w-full text-center md:text-left pl-0 md:pl-24 mt-12">
+      <div
+        data-aos="fade-right"
+        className="w-full text-center md:text-left pl-0 md:pl-24 mt-12"
+      >
         <span className="text-2xl md:text-3xl text-[#d5b36b] border-b-[1px] border-[#d5b36b] font-trajan">
           Features of{" "}
         </span>
-        <span className="text-2xl md:text-3xl ml-1 font-trajan">Harbour Breeze</span>
+        <span className="text-2xl md:text-3xl ml-1 font-trajan">
+          Harbour Breeze
+        </span>
       </div>
 
       {/* Features Section */}
       <section className="py-6 flex flex-col gap-y-6 px-4 md:px-0">
         {/* Feature 1 */}
         <div className="flex w-full flex-col md:flex-row justify-center gap-y-4 gap-x-12 items-center">
-          <img data-aos="fade-right" className="w-[80%] md:w-[30%]" src={Photo1} alt="photo1" />
-          <div data-aos="fade-left" className="bg-[#1A3E5C] text-[#d2ac62] flex items-center justify-center mt-12 md:mt-24 rounded-2xl w-full md:w-[50%] text-base md:text-xl p-4">
+          <img
+            data-aos="fade-right"
+            className="w-[80%] md:w-[30%]"
+            src={Photo1}
+            alt="photo1"
+          />
+          <div
+            data-aos="fade-left"
+            className="bg-[#1A3E5C] text-[#d2ac62] flex items-center justify-center mt-12 md:mt-24 rounded-2xl w-full md:w-[50%] text-base md:text-xl p-4"
+          >
             <div data-aos="fade-up">
               <h2 className="text-lg md:text-xl font-semibold mt-4">
                 A Jewel in the Heart of Mazgaon
               </h2>
               <p className="mt-6 md:mt-8">
-                Harbour Breeze offers you a luxurious lifestyle in the heart of Mazgaon, a location already renowned for its historical significance and modern connectivity. The 20-storeyed building stands as a beacon of architectural brilliance, offering exclusive 1 & 2 BHK flats with 3 BHK Jodi flats available for those who desire extra space.
+                Harbour Breeze offers you a luxurious lifestyle in the heart of
+                Mazgaon, a location already renowned for its historical
+                significance and modern connectivity. The 20-storeyed building
+                stands as a beacon of architectural brilliance, offering
+                exclusive 1 & 2 BHK flats with 3 BHK Jodi flats available for
+                those who desire extra space.
               </p>
               <p className="mt-6 md:mt-8">
-                With an array of premium features like fully mechanized parking, a rooftop with state-of-the-art amenities, and retail spaces for convenience, Harbour Breeze provides the ultimate blend of luxury and functionality.
+                With an array of premium features like fully mechanized parking,
+                a rooftop with state-of-the-art amenities, and retail spaces for
+                convenience, Harbour Breeze provides the ultimate blend of
+                luxury and functionality.
               </p>
             </div>
           </div>
         </div>
 
         {/* Architect Speak Section */}
-        <div className="relative flex w-full justify-center px-2 py-4 border-t-4 border-b-4 border-[#d5b36b] bg-custom-blue-gradient flex-col md:flex-row gap-y-4 gap-x-12 items-center">
+        <div className="relative flex w-full justify-center px-2  border-t-4 border-b-4 border-[#d5b36b] bg-custom-blue-gradient flex-col md:flex-row gap-y-4 gap-x-12 items-center">
           <div className="mt-4 text-right hidden md:block w-[70%] md:w-[50%] text-[#d2ac62]">
-            <img data-aos="fade-left" src={light_leaf} className="absolute w-[15rem] bottom-0 left-0 scale-x-[-1] z-10 opacity-60 -mb-[3rem]" alt="leaf" />
+            <img
+              data-aos="fade-left"
+              src={light_leaf}
+              className="absolute w-[15rem] bottom-0 left-0 scale-x-[-1] z-10 opacity-60 -mb-[3rem]"
+              alt="leaf"
+            />
             <div data-aos="fade-up">
-              <h2 className="font-montserrat text-lg mt-10">Timeless Design Meets Modern Comfort</h2>
+              <h2 className="font-montserrat text-lg mt-10">
+                Timeless Design Meets Modern Comfort
+              </h2>
               <p className="mt-2">
-                The architecture of Harbour Breeze has been meticulously planned to optimize views of the serene Arabian Sea and the lush greenery of Shivaji Park. Every detail has been designed to exude luxury—from the grand entrance porch that leads to a double-height lobby to the seamless column-free apartments that maximize both space and natural light.
+                The architecture of Harbour Breeze has been meticulously planned
+                to optimize views of the serene Arabian Sea and the lush
+                greenery of Shivaji Park. Every detail has been designed to
+                exude luxury—from the grand entrance porch that leads to a
+                double-height lobby to the seamless column-free apartments that
+                maximize both space and natural light.
               </p>
               <p className="mt-4">
-                The facade is a perfect fusion of classical elements and contemporary design, creating a timeless aesthetic that will remain elegant for years to come.
+                The facade is a perfect fusion of classical elements and
+                contemporary design, creating a timeless aesthetic that will
+                remain elegant for years to come.
               </p>
             </div>
           </div>
-          <img data-aos="fade-left" className="w-[80%] md:w-[30%]" src={Photo2} alt="photo2" />
-          <div className="text-left md:text-right block md:hidden w-full md:w-[50%] p-4">
+          <img
+            data-aos="fade-left"
+            className="w-[80%] md:w-[30%]"
+            src={Photo2}
+            alt="photo2"
+          />
+          <div className="text-left md:text-right block md:hidden w-full md:w-[50%] p-4 text-[#d2ac62]">
             <div data-aos="fade-up">
-              <h2 className="font-montserrat text-lg">Timeless Design Meets Modern Comfort</h2>
+              <h2 className="font-montserrat text-lg">
+                Timeless Design Meets Modern Comfort
+              </h2>
               <p className="mt-4">
-                The architecture of Harbour Breeze has been meticulously planned to optimize views of the serene Arabian Sea and the lush greenery of Shivaji Park.
+                The architecture of Harbour Breeze has been meticulously planned
+                to optimize views of the serene Arabian Sea and the lush
+                greenery of Shivaji Park.
               </p>
               <p className="mt-4">
-                Every detail has been designed to exude luxury—from the grand entrance porch to the seamless column-free apartments that maximize both space and natural light.
+                Every detail has been designed to exude luxury—from the grand
+                entrance porch to the seamless column-free apartments that
+                maximize both space and natural light.
               </p>
             </div>
           </div>
@@ -258,23 +302,42 @@ export const Features = () => {
 
         {/* Third Section */}
         <div className="relative flex w-full justify-center border-t-4 border-b-4 border-[#d5b36b] bg-custom-blue-gradient flex-col md:flex-row-reverse gap-y-4 gap-x-12 items-center">
-          <div className="mt-4 text-left hidden md:block w-[70%] md:w-[50%] text-white">
+          <div className="mt-4 text-left hidden md:block w-[70%] md:w-[50%] ">
             <div data-aos="fade-up">
-              <h2 className="font-montserrat text-lg mt-10 text-[#d2ac62]">A Life of Wellness and Leisure</h2>
+              <h2 className="font-montserrat text-lg mt-10 text-[#d2ac62]">
+                A Life of Wellness and Leisure
+              </h2>
               <p className="mt-4 text-[#d2ac62]">
-                At Harbour Breeze, residents are treated to a wellness-focused lifestyle that encompasses a fully equipped gymnasium, a yoga and meditation deck, and a rooftop filled with amenities designed to provide both relaxation and entertainment.
+                At Harbour Breeze, residents are treated to a wellness-focused
+                lifestyle that encompasses a fully equipped gymnasium, a yoga
+                and meditation deck, and a rooftop filled with amenities
+                designed to provide both relaxation and entertainment.
               </p>
               <p className="mt-4 text-[#d2ac62]">
-                From the senior citizen’s corner to the barbeque deck and party lawn, Harbour Breeze creates a sense of community while ensuring the utmost in comfort and luxury.
+                From the senior citizen’s corner to the barbeque deck and party
+                lawn, Harbour Breeze creates a sense of community while ensuring
+                the utmost in comfort and luxury.
               </p>
             </div>
           </div>
-          <img data-aos="fade-left" className="w-[80%] md:w-[40%]" src={Photo4} alt="photo4" />
-          <div className="text-left md:text-right block md:hidden w-full md:w-[50%] p-4 text-white">
-            <h2 className="font-montserrat text-lg">A Life of Wellness and Leisure</h2>
-            <p className="mt-4">
-              At Harbour Breeze, residents are treated to a wellness-focused lifestyle that encompasses a fully equipped gymnasium, a yoga and meditation deck, and a rooftop filled with amenities designed for relaxation and entertainment.
-            </p>
+          <img
+            data-aos="fade-left"
+            className="w-[80%] md:w-[40%]"
+            src={Photo4}
+            alt="photo4"
+          />
+          <div className="text-left md:text-right block md:hidden w-full md:w-[50%] p-4 text-[#d2ac62]">
+            <div data-aos="fade-up">
+              <h2 className="font-montserrat text-lg">
+                A Life of Wellness and Leisure
+              </h2>
+              <p className="mt-4">
+                At Harbour Breeze, residents are treated to a wellness-focused
+                lifestyle that encompasses a fully equipped gymnasium, a yoga
+                and meditation deck, and a rooftop filled with amenities
+                designed for relaxation and entertainment.
+              </p>
+            </div>
           </div>
         </div>
       </section>
